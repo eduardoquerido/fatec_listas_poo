@@ -1,4 +1,0 @@
-INDEX VERSION 1.131+/home/erumbels/eclipse-workspace/.metadata/.plugins/org.eclipse.jdt.core
-3600615880.index
-2711239006.index
-1335122034.index
