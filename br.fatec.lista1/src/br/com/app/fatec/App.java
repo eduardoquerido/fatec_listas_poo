@@ -23,14 +23,23 @@ public class App {
 			
 			switch (op) {
 			case 0:
-				System.out.println("teste");
 				break;
 			case 1:
+				System.out.println("Informe seu nome: ");
 				String nome = ctl.texto();
+				System.out.println("Informe o DDD: ");
+				String ddd = ctl.texto();
+				System.out.println("Informe o telefone: ");
 				String telefone = ctl.texto();
-				String datanascimento = ctl.texto();
-				String genero = ctl.texto();
-				Pessoa x = new Pessoa(nome, telefone, datanascimento, genero);
+				System.out.println("Informe o dia de Nascimento: ");
+				int diaNascimento = ctl.textoInt();
+				System.out.println("Informe o mês de Nascimento: ");
+				int mesNascimento = ctl.textoInt();
+				System.out.println("Informe o ano de Nascimento: ");
+				int anoNascimento = ctl.textoInt();
+				System.out.println("Informe o produto ou serviço utilizado: ");
+				String servicoProduto = ctl.texto();
+				Pessoa x = new Pessoa(nome, telefone, ddd, diaNascimento, mesNascimento, anoNascimento, servicoProduto);
 				pessoa.add(x);
 				break;
 			case 2:

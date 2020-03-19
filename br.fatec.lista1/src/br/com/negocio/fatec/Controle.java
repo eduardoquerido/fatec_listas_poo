@@ -16,6 +16,11 @@ public class Controle {
 
 	public String texto() {
 		String t = scanner.next();
+		return t;
+	}
+	
+	public int textoInt() {
+		int t = scanner.nextInt();
 		
 		return t;
 	}
