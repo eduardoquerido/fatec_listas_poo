@@ -22,6 +22,9 @@ public class App {
 			op = ctl.opcao();
 			
 			switch (op) {
+			case 0:
+				System.out.println("teste");
+				break;
 			case 1:
 				String nome = ctl.texto();
 				String telefone = ctl.texto();
