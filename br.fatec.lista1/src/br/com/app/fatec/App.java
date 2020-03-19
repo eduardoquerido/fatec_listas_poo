@@ -24,7 +24,10 @@ public class App {
 			switch (op) {
 			case 1:
 				String nome = ctl.texto();
-				Pessoa x = new Pessoa(nome);
+				String telefone = ctl.texto();
+				String datanascimento = ctl.texto();
+				String genero = ctl.texto();
+				Pessoa x = new Pessoa(nome, telefone, datanascimento, genero);
 				pessoa.add(x);
 				break;
 			case 2:
