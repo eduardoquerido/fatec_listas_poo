@@ -27,17 +27,17 @@ public class App {
 			case 1:
 				System.out.println("Informe seu nome: ");
 				String nome = ctl.texto();
-				System.out.println("Informe o DDD: ");
+				System.out.println("Informe o DDD(sem o zero): ");
 				String ddd = ctl.texto();
-				System.out.println("Informe o telefone: ");
+				System.out.println("Informe o telefone(9 dígitos): ");
 				String telefone = ctl.texto();
 				System.out.println("Informe o dia de Nascimento: ");
 				int diaNascimento = ctl.textoInt();
-				System.out.println("Informe o mês de Nascimento: ");
+				System.out.println("Informe o mês de Nascimento(número): ");
 				int mesNascimento = ctl.textoInt();
 				System.out.println("Informe o ano de Nascimento: ");
 				int anoNascimento = ctl.textoInt();
-				System.out.println("Informe seu gênero: ");
+				System.out.println("Informe seu gênero(Masculino, Feminino ou Outros: ");
 				String genero = ctl.texto();
 				System.out.println("Informe o produto ou serviço utilizado: ");
 				String servicoProduto = ctl.texto();
