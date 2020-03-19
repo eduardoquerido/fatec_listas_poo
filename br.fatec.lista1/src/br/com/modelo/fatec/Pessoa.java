@@ -8,11 +8,12 @@ public class Pessoa {
 	private int mesNascimento;
 	private int anoNascimento;
 	private String servicoProduto;
+	private String genero;
 	
 	
 
 	
-	public Pessoa(String nome, String telefone, String ddd, int diaNascimento, int mesNascimento, int anoNascimento, String servicoProduto ) {
+	public Pessoa(String nome, String telefone, String ddd, int diaNascimento, int mesNascimento, int anoNascimento, String servicoProduto, String genero) {
 		this.nome = nome;
 		this.telefone = telefone;
 		this.ddd = ddd;
@@ -20,13 +21,15 @@ public class Pessoa {
 		this.mesNascimento = mesNascimento;
 		this.anoNascimento = anoNascimento;
 		this.servicoProduto = servicoProduto;
+		this.genero = genero;
 		
 	}
 	@Override
 	public String toString() {
-		String info = "Nome: "+nome +"\nTelefone: "+"("+ddd+")"+telefone.substring(0, 5)+"-"+telefone.substring(5, 9) +
-				"\nData de Nascimento: "+diaNascimento+"/"+mesNascimento+"/"+anoNascimento
-				+ "\nServiço/Pruduto Consumido: \n"+servicoProduto;
+		String info = "Nome: "+nome +"\nTelefone: "+"("+ddd+")"+telefone.substring(0, 5)+"-"+telefone.substring(5, 9)
+				+ "\nData de Nascimento: "+diaNascimento+"/"+mesNascimento+"/"+anoNascimento
+				+ "\nGênero: "+genero 
+				+ "\nServiço/Pruduto Consumido: "+servicoProduto+"\n";
 		return info;
 	}
 }

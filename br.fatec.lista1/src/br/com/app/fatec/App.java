@@ -37,9 +37,11 @@ public class App {
 				int mesNascimento = ctl.textoInt();
 				System.out.println("Informe o ano de Nascimento: ");
 				int anoNascimento = ctl.textoInt();
+				System.out.println("Informe seu gênero: ");
+				String genero = ctl.texto();
 				System.out.println("Informe o produto ou serviço utilizado: ");
 				String servicoProduto = ctl.texto();
-				Pessoa x = new Pessoa(nome, telefone, ddd, diaNascimento, mesNascimento, anoNascimento, servicoProduto);
+				Pessoa x = new Pessoa(nome, telefone, ddd, diaNascimento, mesNascimento, anoNascimento, servicoProduto, genero);
 				pessoa.add(x);
 				break;
 			case 2:
