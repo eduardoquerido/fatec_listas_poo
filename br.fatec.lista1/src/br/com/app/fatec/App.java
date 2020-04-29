@@ -8,69 +8,70 @@ import br.com.negocio.fatec.Menu;
 
 public class App {
 	public static void main(String[] args) throws IOException{
-		Agenda agenda = new Agenda();
-		Controle controle = new Controle();
+		Agenda ag = new Agenda();
+		Controle c = new Controle();
 		Menu menu = new Menu();
 		try {
-			agenda = controle.carregar();
+			ag = c.carregar();
 		} catch (Exception e) {
-			agenda = new Agenda();
+			ag = new Agenda();
 		}
-		menu.menuAgenda();
+		menu.boasVindas();
 		int opcao = 100;
 		while(opcao != 0) {
 			menu.menu();
 			Controle ctrl = new Controle();
 			opcao = ctrl.opcao();
 			if(opcao == 1) {
-				agenda.inserirContato();
+				ag.inserirContato();
 			}
 			if(opcao == 2) {
-				agenda.listarContatos();
+				ag.listarContatos();
 			}
 			if(opcao == 3) {
-				agenda.listarContatos();
-				agenda.editarContato();
+				ag.listarContatos();
+				ag.editarContato();
 			}
 			if(opcao == 4) {
-				agenda.listarContatos();
-				agenda.excluirContato();
+				ag.listarContatos();
+				ag.excluirContato();
 			}
 			if(opcao == 5) {
-				agenda.listarOrdemAlfabetica();
+				ag.listarContatosAlfabetica();
 			}
 			if(opcao == 6) {
-				agenda.listarPorGenero();
+				ag.listarContatosGenero();
 			}
 			if(opcao == 7) {
-				agenda.adicionarProduto();
+				ag.adicionarProduto();
 			}
 			if(opcao == 8) {
-				agenda.listarPorProduto();
+				ag.listarContatosProdutos();
 			}
 			if(opcao == 9) {
 				System.out.println("Escolha um tipo de relatorio");
 				menu.menu2();
 				opcao = ctrl.opcao();
 				if(opcao == 1) {
-					agenda.idadeMedia();
+					ag.idadeMedia();
 				}
 				if(opcao == 2) {
-					agenda.idadeMediaGenero();
+					ag.idadeMediaGenero();
 				}
 				if(opcao == 3) {
-					agenda.produtoMaisVendido();
+					ag.produtoMaisVendido();
 				}
 				if(opcao == 4) {
-					agenda.produtoMaisVendidoPorGenero();
+					ag.produtoMaisVendidoPorGenero();
 				}
 				
 			}
 		}
+		//c = new Controle();
 		try {
-			controle.salvar(agenda);
+			c.salvar(ag);
 		} catch (IOException e) {
-			//Levanta erro em caso de erro no salvamento da agenda
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 			System.out.println("Nao foi possivel salvar sua agenda");
 		}
