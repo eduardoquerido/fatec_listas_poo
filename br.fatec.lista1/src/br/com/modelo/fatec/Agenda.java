@@ -18,9 +18,10 @@ public class Agenda implements Serializable {
 	public void listarContatos() {
 		int i = 0;
 		for (Contato contato : contatos) {
-			System.out.println("Indice do contato " + i);
+			System.out.println("\n======================");
+			System.out.println("Contato [" + i + "]");
 			System.out.println("Nome: " + contato.getNome() + "\nTelefone: " + contato.getTel().getTel());
-			System.out.println("\nData: " + contato.getDataNascimento().getDt() + "\nGênero: " + contato.getGenero());
+			System.out.println("Data: " + contato.getDataNascimento().getDt() + "\nGênero: " + contato.getGenero());
 			i = i + 1;
 		}
 	}
@@ -30,79 +31,84 @@ public class Agenda implements Serializable {
 		Controle ctrl = new Controle();
 		System.out.println("Nome: ");
 		String nome = ctrl.texto();
-		System.out.println("Tel: ");
+		System.out.println("Telefone: ");
 		String tel = ctrl.texto();
-		System.out.println("Data nasciemnto: ");
+		System.out.println("Data de Nasciemnto: ");
 		String data = ctrl.texto();
-		System.out.println("Genero: ");
+		System.out.println("Gênero: ");
 		String genero = ctrl.texto();
-		Contato c = new Contato(nome, tel, data, genero);
+		Contato controle = new Contato(nome, tel, data, genero);
 		
-		contatos.add(c);
+		contatos.add(controle);
 	}
 	
 	public void editarContato() {
 		int id;
-		Controle ctrl = new Controle();
+		Controle controle = new Controle();
 		System.out.println("Entre com o indice do contato a ser editado");
-		id = ctrl.opcao();
+		id = controle.opcao();
 		System.out.println("Nome: ");
-		ctrl = new Controle();
-		String nome = ctrl.texto();
+		controle = new Controle();
+		String nome = controle.texto();
 		System.out.println("Tel: ");
-		ctrl = new Controle();
-		String tel = ctrl.texto();
+		controle = new Controle();
+		String tel = controle.texto();
 		System.out.println("Data nasciemnto: ");
-		ctrl = new Controle();
-		String data = ctrl.texto();
+		controle = new Controle();
+		String data = controle.texto();
 		System.out.println("Genero: ");
-		ctrl = new Controle();
-		String genero = ctrl.texto();
-		Contato c = new Contato(nome, tel, data, genero);
-		contatos.set(id,c);
+		controle = new Controle();
+		String genero = controle.texto();
+		Contato controle2 = new Contato(nome, tel, data, genero);
+		contatos.set(id,controle2);
 		
 	}
 	
 	public void excluirContato() {
 		int id;
-		Controle ctrl = new Controle();
-		System.out.println("Entre com o id do contato a ser deletado");
-		id = ctrl.opcao();
-		contatos.remove(id);
+		Controle controle = new Controle();
+		System.out.println("Entre com o ID do contato que será deletado");
+		id = controle.opcao();
+		contatos.remove(id+1);
 	}
 	
-	public void listarContatosAlfabetica() {
+	public void listarOrdemAlfabetica() {
 		
 		Collections.sort(contatos);
 		for (Contato contato : contatos) {
+			System.out.println("\n======================");
 			System.out.println("Nome: " + contato.getNome());
-			System.out.println("tel: " + contato.getTel().getTel());
-			System.out.println("Data: " + contato.getDataNascimento().getDt());
-			System.out.println("Genero: " + contato.getGenero());
+			System.out.println("Telefone: " + contato.getTel().getTel());
+			System.out.println("Data de Nascimento: " + contato.getDataNascimento().getDt());
+			System.out.println("Gênero: " + contato.getGenero());
+			System.out.println("\n");
 		}
 	
 	}
 	
-	public void listarContatosGenero() {
-		Controle ctrl = new Controle();
-		String genero = ctrl.texto();
-		System.out.println("Entre com o genero a ser listado");
+	public void listarPorGenero() {
+		Controle controle = new Controle();
+		System.out.println("Entre com o gênero a ser listado");
+		String genero = controle.texto();
 		Collections.sort(contatos);
+		System.out.println("\nLista de Contatos filtrado pelo gênero: ["+genero+"]");
 		for (Contato contato : contatos) {
 		if(contato.getGenero().equals(genero)) {
+			System.out.println("\n======================");
 			System.out.println("Nome: " + contato.getNome());
-			System.out.println("tel: " + contato.getTel().getTel());
-			System.out.println("Data: " + contato.getDataNascimento().getDt());
-			System.out.println("Genero: " + contato.getGenero());
+			System.out.println("Telefone: " + contato.getTel().getTel());
+			System.out.println("Data de Nascimento: " + contato.getDataNascimento().getDt());
+			System.out.println("Gênero: " + contato.getGenero());
+			System.out.println("\n");
 		}
 		}
 	}
 	
 	public void adicionarProduto() {
 		int id;
-		Controle ctrl = new Controle();
-		System.out.println("Entre com o indice do contato");
-		id = ctrl.opcao();
+		Controle controle = new Controle();
+		System.out.println("Entre com o ID do contato");
+		id = controle.opcao();
 		contatos.get(id).inserirProduto();
 	}
 	
@@ -113,16 +119,16 @@ public class Agenda implements Serializable {
 			i = i+1;
 			idade = idade + contato.getDataNascimento().getIdade();
 		}
-		System.out.println("Idade média de clientes "+idade);
+		System.out.println("Média de idade dos clientes: " + idade + " anos");
 	}
 	
 	
 	public void idadeMediaGenero() {
 		int idade = 0;
 		int i=0;
-		Controle ctrl = new Controle();
-		String genero = ctrl.texto();
-		System.out.println("Entre com o genero a ser listado");
+		Controle controle = new Controle();
+		System.out.println("Qual gênero deseja calcular a média de idades?\n Ex: [Masculino / Feminino / Outros]");
+		String genero = controle.texto();
 		Collections.sort(contatos);
 		for (Contato contato : contatos) {
 		if(contato.getGenero().equals(genero)) {
@@ -130,25 +136,28 @@ public class Agenda implements Serializable {
 			idade = idade + contato.getDataNascimento().getIdade();
 		}
 		}
-		System.out.println("Idade média de clientes"+idade);
+		System.out.println("Média de idade dos clientes ["+ genero +"]: "+ idade+" anos");
 	}
 	
 	
-	public void listarContatosProdutos() {
+	public void listarPorProduto() {
 		
 		Collections.sort(contatos);
 		for (Contato contato : contatos) {
+			System.out.println("\n======================");
 			System.out.println("Nome: " + contato.getNome());
-			System.out.println("tel: " + contato.getTel().getTel());
-			System.out.println("Data: " + contato.getDataNascimento().getDt());
-			System.out.println("Genero: " + contato.getGenero());
+			System.out.println("Telefone: " + contato.getTel().getTel());
+			System.out.println("Data de Nascimento: " + contato.getDataNascimento().getDt());
+			System.out.println("Gênero: " + contato.getGenero());
+			System.out.println("\n++++++++++++++++++++++++");
+			System.out.println("\nLista de Produtos de " + contato.getNome()+":");
 			int i = 0;
 			if (!contato.produtos.isEmpty()) {
 				for(Produto prod :contato.produtos) {
 					i = i+1;
-					System.out.println("Produto numero: " + i);
-					System.out.println(prod.getProduto());
-					System.out.println(prod.getValor());
+					System.out.println("\nID do Produto/Serviço: "+"["+ i+"]");
+					System.out.println("Nome do Produto/Serviço: "+prod.getProduto());
+					System.out.println("Valor do Produto/Serviço: " +"R$"+prod.getValor());
 				}
 			}
 		}

@@ -54,15 +54,15 @@ public class Contato implements Serializable, Comparable<Contato> {
 	}
 	
 	public void inserirProduto() {
-		System.out.println("Por favor, digite um nome para o produto/servico");
-		Controle ctrl = new Controle();
-		System.out.println("Nome: ");
-		String nome = ctrl.texto();
-		System.out.println("valor: ");
-		String valor = ctrl.texto();
-		Produto c = new Produto(nome, valor);
+		System.out.println("Informe um produto ou serviço que este contato utiliza: ");
+		Controle controle = new Controle();
+		System.out.println("Nome do Produto/Serviço: ");
+		String nome = controle.texto();
+		System.out.println("Valor do Produto/Serviço: ");
+		String valor = controle.texto();
+		Produto produto = new Produto(nome, valor);
 		
-		produtos.add(c);
+		produtos.add(produto);
 	}
 	
 	
