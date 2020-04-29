@@ -1,6 +1,13 @@
 package br.com.negocio.fatec;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.Scanner;
+
+import br.com.modelo.fatec.Agenda;
 
 public class Controle {
 	public Scanner scanner;
@@ -15,20 +22,28 @@ public class Controle {
 	}
 
 	public String texto() {
-		String t = scanner.next();
+		String t = scanner.nextLine();
 		return t;
 	}
 	
-	public int textoInt() {
-		int t = scanner.nextInt();
-		
-		return t;
+	public Agenda carregar() throws Exception {
+		FileInputStream entrada = new FileInputStream("AgendaContatos.txt");
+		ObjectInputStream leitor = new ObjectInputStream(entrada);
+		Object ob = leitor.readObject();
+		Agenda ag = (Agenda) ob;
+		leitor.close();
+		return ag;
 	}
 	
-
+	public void salvar(Agenda ag) throws IOException {
+		FileOutputStream saida = new FileOutputStream("AgendaContatos.txt");
+		ObjectOutputStream escritor = new ObjectOutputStream(saida);
+		escritor.writeObject(ag);
+		escritor.close();
+	}
+	
 	@Override
 	protected void finalize() throws Throwable {
 		scanner.close();
 	}
-
 }
