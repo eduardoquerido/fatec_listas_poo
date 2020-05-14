@@ -2,7 +2,7 @@
 <class-diagram version="1.2.3" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
   <class id="1" language="java" name="br.com.modelo.fatec.Cadastro" project="FinTech" 
-    file="/FinTech/src/br/com/modelo/fatec/Cadastro.java" binary="false" corner="BOTTOM_RIGHT">    
+    file="/br.fatec.lista3/src/br/com/modelo/fatec/Cadastro.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="415" y="234"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -11,7 +11,7 @@
     </display>  
   </class>  
   <class id="2" language="java" name="br.com.modelo.fatec.Entrada" project="FinTech" 
-    file="/FinTech/src/br/com/modelo/fatec/Entrada.java" binary="false" corner="BOTTOM_RIGHT">    
+    file="/br.fatec.lista3/src/br/com/modelo/fatec/Entrada.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="412" y="645"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -20,7 +20,7 @@
     </display>  
   </class>  
   <class id="3" language="java" name="br.com.modelo.fatec.Caixa" project="FinTech" 
-    file="/FinTech/src/br/com/modelo/fatec/Caixa.java" binary="false" corner="BOTTOM_RIGHT">    
+    file="/br.fatec.lista3/src/br/com/modelo/fatec/Caixa.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1053" y="642"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -29,7 +29,7 @@
     </display>  
   </class>  
   <class id="4" language="java" name="br.com.modelo.fatec.Usuario" project="FinTech" 
-    file="/FinTech/src/br/com/modelo/fatec/Usuario.java" binary="false" corner="BOTTOM_RIGHT">    
+    file="/br.fatec.lista3/src/br/com/modelo/fatec/Usuario.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="985" y="304"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      

@@ -31,9 +31,9 @@ public class app {
 			usuario = new Usuario();
 		}
 		while(true) {
-			//Login
+			
 			if(usuario.getCadastros().size()==0) {
-				//usuario = new Usuario();
+				
 				novoCadastro = new Cadastro();
 				novoCadastro.setCadastro();
 				usuario.inserirCadastro(novoCadastro);
@@ -53,7 +53,7 @@ public class app {
 			ctrl = new Controle();
 			opc = ctrl.opcao();
 			if(opc == 1) {
-				// entrar salario
+				// Salario
 				entrada = new Entrada();
 				System.out.println("Valor do salario");
 				ctrl = new Controle();
@@ -62,25 +62,25 @@ public class app {
 				usuario.getCaixa().setEntradas(entrada);
 			}
 			if(opc == 2) {
-				// entrar Investimento
+				// Investimento
 				entrada = new Entrada();
-				System.out.println("Valor do salario");
+				System.out.println("Valor do investimento");
 				ctrl = new Controle();
 				valor = ctrl.valor();
 				entrada.Investimento(valor, sessao);
 				usuario.getCaixa().setEntradas(entrada);
 			}
 			if(opc == 3) {
-				// entrar Receita
+				// Receita
 				entrada = new Entrada();
-				System.out.println("Valor do salario");
+				System.out.println("Valor do receita");
 				ctrl = new Controle();
 				valor = ctrl.valor();
 				entrada.Receita(valor, sessao);
 				usuario.getCaixa().setEntradas(entrada);
 			}
 			if(opc == 4) {
-				// entrar despesa
+				// Despesas
 				entrada = new Entrada();
 				System.out.println("Nome da despesa");
 				ctrl = new Controle();
@@ -96,10 +96,10 @@ public class app {
 				usuario.relatorio();
 			}
 			if(opc == 6) {
-				//relatorio semana do mes
+				//relatorio semanal
 				usuario.relatorioSemana();
 			}
-			if(opc == 99) {
+			if(opc == 7) {
 				novoCadastro = new Cadastro();
 				novoCadastro.setCadastro();
 				usuario.inserirCadastro(novoCadastro);

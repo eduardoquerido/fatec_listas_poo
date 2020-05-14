@@ -13,14 +13,11 @@ public class Cadastro implements Serializable{
 	protected String pass;
 	protected String login;
 	
-//	public Cadastro() {
-//		super();
-//		setCadastro();
-//	}
-	
 	
 	public void setCadastro() {
+		
 		// Cadastrar
+		
 		Controle ctrl = new Controle();
 		System.out.println("Nome: ");
 		ctrl = new Controle();
@@ -34,7 +31,7 @@ public class Cadastro implements Serializable{
 		System.out.println("Email:");
 		ctrl = new Controle();
 		this.email = ctrl.texto();
-		System.out.println("login: ");
+		System.out.println("Login: ");
 		ctrl = new Controle();
 		this.login = ctrl.texto();
 		System.out.println("Senha: ");

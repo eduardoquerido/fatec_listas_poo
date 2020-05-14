@@ -32,7 +32,7 @@ public class Controle {
 	}
 	
 	public Usuario carregar() throws Exception {
-		FileInputStream entrada = new FileInputStream("C:\\Users\\Marcio\\Desktop\\finntech.txt");
+		FileInputStream entrada = new FileInputStream("C:\\Users\\Junior\\Desktop\\Lista3.txt");
 		ObjectInputStream leitor = new ObjectInputStream(entrada);
 		Object ob = leitor.readObject();
 		Usuario clientesLista = (Usuario) ob;
@@ -41,7 +41,7 @@ public class Controle {
 	}
 	
 	public void salvar(Usuario clientesLista) throws IOException {
-		FileOutputStream saida = new FileOutputStream("C:\\Users\\Marcio\\Desktop\\finntech.txt");
+		FileOutputStream saida = new FileOutputStream("C:\\Users\\Junior\\Desktop\\Lista3.txt");
 		ObjectOutputStream escritor = new ObjectOutputStream(saida);
 		escritor.writeObject(clientesLista);
 		escritor.close();

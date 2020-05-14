@@ -11,11 +11,6 @@ public class Usuario implements Serializable{
 	protected Caixa caixa;
 	public List<Cadastro> cadastros = new ArrayList<Cadastro>();
 	
-	
-//	public Usuario() {
-//		this.caixa = new Caixa();
-//	}
-	
 	@SuppressWarnings("deprecation")
 	public void relatorio() {
 		Controle ctrl = new Controle();
