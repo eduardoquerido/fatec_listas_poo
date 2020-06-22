@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+/home/erumbels/Desktop/Chat/.metadata/.plugins/org.eclipse.jdt.core
+3528286710.index
+78672028.index
+2406181810.index
